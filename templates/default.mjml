@@ -1,0 +1,90 @@
+<mjml>
+  <mj-head>
+    <mj-title>SKY</mj-title>
+    <mj-attributes>
+      <mj-class name="head1" font-size="36px" font-weight="300"></mj-class>
+      <mj-class name="head2" font-size="24px" font-weight="600"></mj-class>
+      <mj-font name="Lato" href="https://fonts.googleapis.com/css2?family=Lato"></mj-font>
+      <mj-text color="#fff" font-family="Lato, sans-serif" font-size="16px" line-height="1.6" />
+    </mj-attributes>
+    <mj-breakpoint width="460px" />
+    <mj-style inline="inline">
+      .spacebg {
+      background: rgb(0,0,0);
+      background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#5da4de",GradientType=1);
+      }
+      h2 {
+        color: #e8b343;
+      }
+      img {
+        width: 100%;
+      }
+      a {
+      color: #ff683a;
+      }
+      ol li {
+      padding: 16px;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body css-class="spacebg">
+    <mj-section>
+      <mj-column width="576px">
+        <mj-image src="https://blogger.googleusercontent.com/img/a/AVvXsEh4mUO22lLr8tIWdCBQGgjfBB0DWXEuyuBmXiu9Lz54tP21qKJl8Re0pRjJtBvvDFsYyAbTgOntzT3GY6oQVlDgzBpltZ4sZUeH6tsT3NtUmY_bbPGAvPMCb7m4o6UoulUTdXDMzAWHFwZGh0nztRgTAQuVLNlJZ5jsrkX48ZnZeHbf1_zXhTrsQnMr9w=s1600" width="200px" />
+        <mj-text mj-class="head1" padding-bottom="32px" align="center">
+          The SKY of Astronomy
+        </mj-text>
+        <mj-divider border-style="solid" border-width="2px" border-color="#666" width="200px" />
+      </mj-column>
+    </mj-section>
+    <mj-include path="content.mjml" />
+    <mj-section>
+      <mj-column>
+        <mj-spacer />
+        <mj-divider border-style="dotted" border-width="2px" border-color="#eee" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="24px">
+      <mj-column>
+        <mj-text color="#fff">
+          <h3>
+            Fin.
+          </h3>
+        	<p>
+            thanks for reading this newsletter till the end!<br>this first issue is very barebones; however, we have a ton of ideas in store for the future, and you can help us too!
+          </p>
+          <h4>
+            How you can pitch in
+          </h4>
+          <p>you could join the whatsapp group for the blog Antariksh and chip in with news entries.</p>
+        </mj-text>
+        <mj-text>
+          the group link: <a href="https://chat.whatsapp.com/KnFWsReGnk02UGoCatdPxj">https://chat.whatsapp.com/KnFWsReGnk02UGoCatdPxj</a>
+        </mj-text>
+        <mj-text>
+          once again, thanks for reading this newsletter!<br><br>
+          – Newsletter Team: <br>Ashutosh Kashyap (MS22), <br> Namitha Anjana Suresh (MS22), <br>Sanskar Mani Tripathi (MS21)
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-divider border-style="solid" border-width="2px" border-color="#999" width="200px" />
+        <mj-spacer />
+        <mj-button background-color="#ed601e" width="110px" href="https://forms.gle/UY2Zh8UJvEERgGk86">
+          Feedback
+        </mj-button>
+        <mj-social icon-size="32px" mode="horizontal" inner-padding="8px">
+          <mj-social-element name="twitter" href="https://twitter.com/AstroclubIISERM" />
+          <mj-social-element name="instagram" href="https://www.instagram.com/astroclub.iiserm/" />
+          <mj-social-element name="youtube" href="https://www.youtube.com/channel/UCj6eEl3_rXHt4_7wKzk-b-g" />
+        </mj-social>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

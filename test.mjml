@@ -1,0 +1,153 @@
+<mjml>
+  <mj-head>
+    <mj-title>SKY</mj-title>
+    <mj-attributes>
+      <mj-class name="head1" font-size="36px" font-weight="300"></mj-class>
+      <mj-class name="head2" font-size="24px" font-weight="600"></mj-class>
+      <mj-font name="Lato" href="https://fonts.googleapis.com/css2?family=Lato"></mj-font>
+      <mj-text color="#fff" font-family="Lato, sans-serif" font-size="16px" line-height="1.6" />
+    </mj-attributes>
+    <mj-breakpoint width="460px" />
+    <mj-style inline="inline">
+      .spacebg {
+      background: rgb(0,0,0);
+      background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#5da4de",GradientType=1);
+      }
+      a {
+      color: #ff683a;
+      }
+      ol li {
+      padding: 16px;
+      }
+      blockquote {
+        background: inherit;
+        padding: 0.5rem;
+        border-left: solid 3px #ccc;
+        font-style: italic;
+        font-family: serif !important;
+        font-size: larger;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body css-class="spacebg">
+    <mj-section>
+      <mj-column width="576px">
+        <mj-image src="https://blogger.googleusercontent.com/img/a/AVvXsEh4mUO22lLr8tIWdCBQGgjfBB0DWXEuyuBmXiu9Lz54tP21qKJl8Re0pRjJtBvvDFsYyAbTgOntzT3GY6oQVlDgzBpltZ4sZUeH6tsT3NtUmY_bbPGAvPMCb7m4o6UoulUTdXDMzAWHFwZGh0nztRgTAQuVLNlJZ5jsrkX48ZnZeHbf1_zXhTrsQnMr9w=s1600" width="200px" />
+        <mj-text mj-class="head1" padding-bottom="32px" align="center">
+          The SKY of Astronomy
+        </mj-text>
+        <mj-divider border-style="solid" border-width="2px" border-color="#666" width="200px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="24px">
+      <mj-column>
+        <mj-text mj-class="head2" color="#e8b343"> S: Space Research and Developments</mj-text>
+        <mj-text>
+          <ol>
+            <li><a href="https://astronomyclubiiserm.blogspot.com/2023/03/understanding-astrochemistry.html">Understanding Astrochemistry </a> – by Anubhav Rajyan (MS20070) </li>
+            <li><a href="https://astronomyclubiiserm.blogspot.com/2023/03/a-very-old-story.html"> A very old story </a> – by Nabil Husain (MS21233) </li>
+            <li><a href="https://astronomyclubiiserm.blogspot.com/2023/03/an-introduction-to-newtonian-cosmology.html">An Introduction to Newtonian Cosmology</a> – by Sanskar (MS21234) </li>
+            
+          </ol>
+        </mj-text>
+        <mj-spacer />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="12px">
+    	<mj-column>
+        <mj-text mj-class="head2" color="#e8b343"> K: Know your Mission </mj-text>
+        <mj-text> <h2>A Huge Leap for Mankind</h2> 
+          <p> On to the Moon and back... </p>
+          <p>This week we are exploring the Apollo 11 mission. Apollo 11 was a NASA mission that sent over 20 astronauts into Space, and 12 landed on the Moon. This was done as a part of the then United States President John .F. Kennedy's plan to land astronauts on the Moon by 1970. The testing missions started in 1966, and finally, in July 1969, Apollo 11 landed on the Moon. Neil Armstrong and Buzz Aldrin became the first humans to set foot on the Moon.</p>
+          <p>The Saturn V Launch vehicle was 111 meters high and weighed a whopping 3,038,500 kg. It was launched from Cape Kennedy with the hopes of all of humankind. All eyes were on the spacecraft that had moved in its predicted trajectory without the help of any trajectory corrections. The spacecraft carried Neil Armstrong, Edwin Aldrin, and Michael Collins. Apollo entered its first lunar orbit 114 by 313 km (elliptical) and then a nearly circular 100 by 122 km orbit above the surface of the Moon. </p>
+        </mj-text>
+        <mj-image src="https://www.nasa.gov/sites/default/files/thumbnails/image/liftoff_0.jpg" alt="" />
+        <mj-text>
+          <small><a href="https://www.nasa.gov/mission_pages/apollo/missions/apollo11.html">Liftoff of Apollo 11</a></small>
+          <p>Twelve orbits were made, and by the 12th orbit, the spacecraft separated into two: Columbia, which carried Collins, and Eagle, which carried Armstrong and Aldrin. Eagle began its descent by changing its nearly circular orbit to an elliptical one that came 15,000 meters close to the Moon. It then started its descent toward the surface. Then at 4:17 PM EDT, the craft landed in the Sea of Tranquility. Then at 10:56 PM, Armstrong became the first man to set foot on the Moon and came to the ever-famous words of Armstrong...</p>
+          <blockquote>One step for man, a giant leap for humankind.</blockquote>
+          <p>During their time on the surface, they set up various devices there. They set up an instrument to measure the solar wind reaching Moon. Another is to detect the laser beams from Astronomical Observatories on Earth and a seismometer to detect any moonquakes or meteor impacts on the surface. They also took rock and soil samples for further studies. After 21 hours and 38 minutes, the astronauts ascended into the Lunar orbit, where the Eagle was docked back with the Columbia. The craft then began its journey back home. Their mission was a huge success.</p>
+          
+          <p>– Namitha (MS22118)</p>
+          
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="12px">
+      <mj-column>
+        <mj-text mj-class="head2" color="#e8b343"> Y: Yield of the Fortnight </mj-text>
+        <mj-text color="#fff">
+          <p>his time the Talk'O'Tuesday series featured two talks: </p>
+          <ol>
+            <li>Understanding Neutron Stars and the Process of Accretion by Niranjan</li>
+            <li>Gravitational Lensing and the Most Powerful Explosions in Space by Prajakta</li>
+          </ol>
+          
+          <p>Moreover, The club, in collaboration with BDF, hosted Dr. Dimitra Atri from New York University Abu Dhabi, who gave an intriguing Astrobiology Talk on the likelihood of discovering life beyond our solar system. The club also organized supplement sessions on Introduction to Astronomy and Astrophysics that aligned with the IDC201 course curriculum being credited by the MS21 batch. These events provided an excellent chance for enthusiasts to delve deeper into the mysteries of space.</p>
+
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+      </mj-column> 
+      <mj-column>
+      </mj-column> 
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-spacer />
+        <mj-divider border-style="dotted" border-width="2px" border-color="#eee" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="24px">
+      <mj-column>
+        <mj-text color="#fff">
+          <h3>
+            Fin.
+          </h3>
+        	<p>
+            A project we have been working on for the past few months is finally on track for release: We're making official merch! <br> Currently, only postcards are available, however more things are on the way. <br><br> To sign up for recieving free samples of the cards, use the following google form: <a href="https://forms.gle/MuwSS1E2LRPPun886">https://forms.gle/MuwSS1E2LRPPun886</a>
+            
+          </p>
+          <h4>
+            How you can pitch in
+          </h4>
+          <p>you could join the whatsapp group for the blog Antariksh and chip in with news entries.</p>
+        </mj-text>
+        <mj-text>
+          the group link: <a href="https://chat.whatsapp.com/KnFWsReGnk02UGoCatdPxj">https://chat.whatsapp.com/KnFWsReGnk02UGoCatdPxj</a>
+        </mj-text>            
+        <mj-text>
+          
+          – Newsletter Team: <br>Ashutosh Kashyap (MS22), <br> Namitha Anjana Suresh (MS22), <br>Sanskar Mani Tripathi (MS21)
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-divider border-style="solid" border-width="2px" border-color="#999" width="200px" />
+        <mj-spacer />
+        <mj-button background-color="#ed601e" width="130px" href="https://forms.gle/UY2Zh8UJvEERgGk86">
+          Feedback
+        </mj-button>
+        <mj-button background-color="#eee" color="#333" width="130px" href="https://forms.gle/FXDekNpX592Pk9V37">
+          Unsubscribe
+        </mj-button>
+        
+        
+        <mj-social icon-size="32px" mode="horizontal" inner-padding="8px">
+          <mj-social-element name="twitter" href="https://twitter.com/AstroclubIISERM" />
+          <mj-social-element name="instagram" href="https://www.instagram.com/astroclub.iiserm/" />
+          <mj-social-element name="youtube" href="https://www.youtube.com/channel/UCj6eEl3_rXHt4_7wKzk-b-g" />
+        </mj-social>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
