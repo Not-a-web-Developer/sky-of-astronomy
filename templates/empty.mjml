@@ -1,0 +1,38 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-font name="Lato" href="https://fonts.googleapis.com/css2?family=Lato"></mj-font>
+      <mj-style inline="inline">
+      .spacebg {
+      background: rgb(0,0,0);
+      background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,26,57,1) 50%, rgba(18,46,102,1) 85%, rgba(24,62,134,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#5da4de",GradientType=1);
+      }
+      h2 {
+        color: #e8b343;
+      }
+      img {
+        width: 100%;
+      }
+      a {
+      color: #ff683a;
+      }
+      ol li {
+      padding: 16px;
+      }
+
+    </mj-style>
+    </mj-attributes>
+  </mj-head>
+  <mj-body css-class="spacebg">
+    <mj-section padding="24px">
+      <mj-column>
+		    <mj-text>
+          {{{content}}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

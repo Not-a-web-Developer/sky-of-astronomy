@@ -1,69 +1,94 @@
-var fs = require('fs'),
-    path = require('path'),
-    _ = require('underscore');
-// const md2mc = require('markdown-to-mailchimp');
-// const marked =require('marked');
-const mjml2html = require('mjml');
+// Import necessary libraries/modules
+var fs = require("fs"), // File System module for working with files
+    path = require("path"), // Path module for handling file paths
+    _ = require("underscore"), // Underscore library for utility functions
+    mustache = require("mustache"), // Mustache library for templating
+    mammoth = require("mammoth"), // Mammoth library for converting docx to HTML
+    cheerio = require("cheerio"); // Cheerio library for parsing HTML
 
-var Mustache = require('mustache');
+const mjml2html = require('mjml'); // MJML library for converting MJML to HTML
 
-// Return only base file name without dir
+// Entry point of the program
+main();
+
+// Function to get the most recent file name from a directory
 function getMostRecentFileName(dir) {
-    var files = fs.readdirSync(dir);
-
-    // use underscore for max()
-    return _.max(files, function (f) {
+    var files = fs.readdirSync(dir); // Read the list of files in the directory
+    return _.max(files, function (f) { // Find the file with the latest modification time
         var fullpath = path.join(dir, f);
-
-        // ctime = creation time is used
-        // replace with mtime for modification time
-        return fs.statSync(fullpath).ctime;
+        return fs.statSync(fullpath).mtime;
     });
 }
 
-var flnm = getMostRecentFileName('./input-articles/');
+// Main function
+async function main() {
+    // Get the most recent file name from the input articles directory
+    var flnm = getMostRecentFileName("./input-articles/");
+    console.log(flnm); // Display the most recent file name    
 
-/* var inpost = fs.readFileSync(`./input-articles/${flnm}`, 'utf-8');
+    const options = {
+        styleMap: [
+            "p[style-name='Subtitle'] => h6:fresh"
+        ]
+    }
 
-console.log(inpost); */
-/* 
-const options = {
-    // Mandatory
-    markdown: `./input-articles/${flnm}`,
-    template: './templates/default.mjml',
-    output: './nls/'
+
+    // Convert the docx file to HTML using Mammoth
+    const result = await mammoth.convertToHtml({ path: "./input-articles/" + flnm }, options);
+
+    var html = result.value; // Extract the HTML content from the result
+    var tempHTML = cheerio.load(html); // Load the HTML content into Cheerio
+
+    html = tempHTML.html(); // Get the HTML content from Cheerio
+
+    const warnings = result.messages; // Get any conversion warnings
+    if (warnings.length > 0) {
+        console.log("Warnings while converting docx to html:");
+        for (var warning of warnings) {
+            console.log(warning.message); // Display conversion warnings
+        }
+    }
+
+    const suffix = await fs.readFileSync('./templates/suffix.html', 'utf8');
+
+    tempHTML = cheerio.load(html);
+    tempHTML("img").attr("style", "max-width: 80%; height: auto; margin-left: auto; margin-right: auto; display: block;");
+    tempHTML("div").attr("style", "background:linear-gradient(rgb(0,0,0) 0%,rgb(10,26,57) 50%,rgb(18,46,102) 85%,rgb(24,62,134) 100%);");
+    tempHTML("h1").attr("style", "font-family: Lato,sans-serif; font-size: 30px; font-weight: 600; line-height: 1.6; text-align: center; color: #ffffff;");
+    tempHTML("h2").attr("style", "color: #e8b343; font-size: 24px; text-decoration: underline;");
+    tempHTML("h3").attr("style", "color: #ffffff; font-size: 24px;");
+    tempHTML("h4").attr("style", "color: #ffffff; font-size: 20px;");
+    tempHTML("h5").attr("style", "color: #ffffff; font-size: 18px;");
+    tempHTML("a").attr("style", "color: #ff683a; font-size: 16px; line-height: 1.5; text-decoration: underline;");
+    tempHTML("p").attr("style", "color: #ffffff; font-size: 16px; line-height: 1.5;");
+    tempHTML("li").attr("style", "color: #ffffff; line-height: 2.5; font-size: 16px;");
+    tempHTML("h6").attr("style", "border-bottom: 1px solid #808080; font-size: 16px; line-height: 1.5; margin-bottom: 0.5em; padding-bottom: 0.5em; text-align: center; width: 100%;");
+
+    html = tempHTML.html(); // Get the HTML content from Cheerio
+    const completeHtml = `
+    ${html}
+    ${suffix}
+    `;
+    
+    // Write the HTML content to an output file
+    await fs.writeFileSync('./output-articles/mammoth/' + flnm + '.html', completeHtml, 'utf8');
+
+    const content = { content: completeHtml };
+    const template = fs.readFileSync('./templates/empty.mjml', 'utf8');
+
+    // Render the MJML template with the HTML content
+    const outputMjml = mustache.render(template, content);
+    // Write the rendered MJML to an output file
+    await fs.writeFileSync('./output-articles/mjml/' + flnm + '.mjml', outputMjml, 'utf8');
+
+    // Convert the MJML to HTML using MJML library
+    const output = mjml2html(outputMjml);
+    // Write the HTML output to an output file
+    await fs.writeFileSync('./output-articles/html/' + flnm + '.html', output.html, 'utf8');
+    if (output.errors.length > 0) {
+        console.log("Errors while converting mjml to html:");
+        for (var error of output.errors) {
+            console.log(error.message); // Display conversion errors
+        }
+    }
 }
-
-md2mc(options); 
-
-var inphtml = marked.parse(inpost);
-console.log(inphtml);
-*/
-
-var mammoth = require("mammoth");
-
-mammoth.convertToHtml({path: `./input-articles/${flnm}`})
-    .then(function(result){
-        var inphtml = result.value; // The generated HTML
-        fs.writeFileSync('mammothout.html', inphtml);
-        var messages = result.messages; // Any messages, such as warnings during conversion
-        // console.log(inphtml);
-        var contentlol = {
-            content: inphtml 
-        };
-        
-        var tmplt = fs.readFileSync('./templates/content-empty.mjml', 'utf-8');
-        
-        // console.log(tmplt);
-        
-        var outmjml = Mustache.render(tmplt, contentlol);
-        fs.writeFileSync('./templates/content.mjml', outmjml)
-
-        var outfinal = mjml2html('./templates/default.mjml').html;
-        
-        console.log(outfinal)
-        fs.writeFileSync('testlol.html', outfinal);
-    })
-    .done();
-
-
